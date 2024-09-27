@@ -11,7 +11,11 @@ nav {
   }
   
   /* Style for the h1 element */
-  h1, h2 {
+
+  h1 {
+    color: black;
+  }
+  h2 {
     color: black;
   }
   
