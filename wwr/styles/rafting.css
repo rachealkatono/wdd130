@@ -1,8 +1,8 @@
 :root {
     --primary-color: #283618; /* Dark green */
-    --secondary-color: #BC6C25; /* Burnt orange */
+    --secondary-color: #f8f3ef; /* white */
     --accent1-color: #606C38; /* Olive green */
-    --accent2-color: #DDA15E; /* Soft gold */
+    --accent2-color: #ffffff; /* white */
 
     --heading-font: 'Oswald', cursive; /* Heading font */
     --paragraph-font: 'Playfair Display', serif; /* Paragraph font */
@@ -56,18 +56,18 @@ nav a {
 }
 
 nav a:link, nav a:visited {
-    color: var(--nav-link-color);
+    color: var(--accent2-color);
 }
 
 nav a:hover {
-    color: var(--nav-hover-link-color);
+    color: var(--primary-color);
     background-color: var(--nav-hover-background-color);
 }
 
 .hero {
     position: relative;
     align-items: center;
-    background-image: url(../images/hero-image.png);
+    background-image: url(../images/rafting65_600.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -121,14 +121,14 @@ section {
 
 section img {
     width: 400px; /* Increase the width */
-    height: auto; /* Maintain aspect ratio */
+    height: 200px; /* Maintain aspect ratio */
     margin: 5px;
     border-radius: 10px; /* Add rounded corners */
     object-fit: cover; /* Ensure images maintain aspect ratio and cover the area */
 }
 
 footer {
-    background-color: var(--accent1-color);
+    background-color: var(--nav-hover-background-color);
     padding: 20px;
     display: flex;
     justify-content: space-between;
