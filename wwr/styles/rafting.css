@@ -118,11 +118,16 @@ main {
 section {
     margin-bottom: 40px;
 }
+section figure {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
 
 section img {
     width: 400px; /* Increase the width */
     height: 200px; /* Maintain aspect ratio */
-    margin: 5px;
     border-radius: 10px; /* Add rounded corners */
     object-fit: cover; /* Ensure images maintain aspect ratio and cover the area */
 }
