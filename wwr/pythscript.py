@@ -14,7 +14,7 @@ def run_command(command):
 
 def fix_repository_url():
     # Correct the URL to your actual GitHub repository
-    new_url = "https://github.com/rachealkatono/wdd130"
+    new_url = "https://github.com/rachealkatono/wdd130/"
     
     # Set the remote URL for the repository
     commands = [
