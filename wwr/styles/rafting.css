@@ -33,7 +33,7 @@ p {
 }
 
 header {
-    display: flex;
+    display: grid;
     justify-content: space-between; /* Pushes logo to left and nav to right */
     align-items: center;
     padding: 20px;
