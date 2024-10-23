@@ -34,11 +34,13 @@ p {
 
 header {
     display: grid;
-    justify-content: auto 1fr; 
+    grid-template-columns: auto 1fr;  /* This is what you probably meant to use */
+    justify-content: start;           /* or another valid justify-content value */
     align-items: center;
     padding: 20px;
     background-color: var(--accent1-color);
 }
+
 
 header img {
     width: 150px; /* Set the standard width */
