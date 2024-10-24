@@ -130,25 +130,23 @@ main {
     padding: 20px;
 }
 
-section img, .adventures img, .history img, .team img {
-    width: 400px; /* Set a fixed width */
-    height: 250px; /* Set a fixed height for uniformity */
-    border-radius: 10px; /* Add rounded corners */
-    object-fit: cover; /* Ensure the image maintains aspect ratio and covers the area */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-/* Styling for the figure and figcaption */
-section figure, .adventures figure {
-    display: inline-block;
+figure {
+    flex: 1 1 30%; /* Adjusts the size of each figure */
     margin: 10px;
     text-align: center;
 }
 
-section figcaption, .adventures figcaption {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: var(--primary-color);
+figure img {
+    width: 400px;
+    height: 250px;
 }
+
 
 
 .history {
