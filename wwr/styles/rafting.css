@@ -1,17 +1,18 @@
 :root {
-    --primary-color: #22320f; /* Dark green */
-    --secondary-color: #f8f3ef; /* white */
-    --accent1-color: #505b2a; /* Olive green */
-    --accent2-color: #ffffff; /* white */
-
-    --heading-font: 'Oswald', cursive; /* Heading font */
-    --paragraph-font: 'Playfair Display', serif; /* Paragraph font */
-
+    --primary-color: #0e1505; /* Dark green */
+    --secondary-color: #f8f3ef; /* Light beige */
+    --accent1-color: #39421a; /* Olive green */
+    --accent2-color: #ffffff; /* White */
+    --hover-background: #263015; /* Darker Olive Green */
+    --heading-font: 'Oswald', cursive;
+    --paragraph-font: 'Playfair Display', serif;
     --nav-background-color: var(--accent1-color);
-    --nav-link-color: var(--primary-color);
-    --nav-hover-link-color: var(--secondary-color);
-    --nav-hover-background-color: var(--accent2-color);
+    --nav-link-color: var(--accent2-color); /* White for better contrast */
+    --nav-hover-link-color: var(--primary-color);
+    --nav-hover-background-color: var(--hover-background); /* Darker for hover */
 }
+
+
 
 body {
     font-family: var(--paragraph-font);
@@ -34,13 +35,11 @@ p {
 
 header {
     display: grid;
-    grid-template-columns: auto 1fr;  /* This is what you probably meant to use */
-    justify-content: start;           /* or another valid justify-content value */
+    grid-template-columns: auto 1fr;
     align-items: center;
     padding: 20px;
     background-color: var(--accent1-color);
 }
-
 
 header img {
     width: 150px; /* Set the standard width */
@@ -48,10 +47,10 @@ header img {
 }
 
 nav {
+    display: flex;
+    justify-content: flex-end;
     background-color: var(--nav-background-color);
     font-size: 1.2rem;
-    justify-content: flex-end;
-    display: flex;
 }
 
 nav a {
@@ -64,18 +63,18 @@ nav a {
 }
 
 nav a:link, nav a:visited {
-    color: var(--accent2-color);
+    color: var(--nav-link-color);
 }
 
 nav a:hover {
-    color: var(--primary-color);
+    color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
 }
 
 .hero {
     position: relative;
     align-items: center;
-    background-image: url(../images/rafting65_600.jpg);
+    background-image: url(../images/hero-image.png);
     background-position: center;
     background-size: cover;
 }
@@ -127,6 +126,10 @@ section {
     margin-bottom: 40px;
 }
 
+section {
+    margin-bottom: 40px;
+}
+
 section figure {
     display: inline-block;
     margin: 10px;
@@ -134,16 +137,11 @@ section figure {
 }
 
 section img {
-    border-radius: 10px; /* Add rounded corners */
-
-}
-.xz img{
     width: 400px; /* Increase the width */
-    height: 300px; /* Maintain aspect ratio */
-    object-fit: cover;
-
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the area */
 }
-
 
 section figcaption {
     margin-top: 5px;
@@ -153,7 +151,7 @@ section figcaption {
 
 section img {
     width: 400px; /* Increase the width */
-    height: auto; /* Maintain aspect ratio */
+    height: 250px; /* Maintain aspect ratio */
     margin: 5px;
     border-radius: 10px; /* Add rounded corners */
     object-fit: cover; /* Ensure images maintain aspect ratio and cover the area */
@@ -192,6 +190,7 @@ section img {
     width: 30%; /* Adjust width as needed */
     margin: 0 20px;
 }
+
 .adventures {
     display: flex;
     flex-wrap: wrap;
@@ -204,6 +203,7 @@ section img {
     text-align: center;
     margin-bottom: 20px; /* Add some space between rows */
 }
+
 .adventures img {
     width: 100%;
     height: 200px;
@@ -245,6 +245,7 @@ footer .sociallinks {
     width: 30px;
     height: 30px;
 }
+
 /* Ensure the layout is responsive */
 @media (max-width: 768px) {
     header {
