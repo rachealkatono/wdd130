@@ -277,20 +277,30 @@ footer {
     align-items: center;
     padding: 10px 20px;
     background-color: var(--accent1-color);
-    color: var(--accent2-color);
+    color: white;
 }
 
 footer .copyright {
     flex-grow: 1;
     text-align: center;
+    color: white;
 }
 
 footer .sociallinks {
     display: flex;
     gap: 10px;
     margin-left: auto;
+    color: #ffffff;
+}
+footer a {
+    color: white;
+    text-decoration: none;
 }
 
+/* Optional: Add hover effect for links */
+footer a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
 .sociallinks a {
     margin: 0 10px;
 }
