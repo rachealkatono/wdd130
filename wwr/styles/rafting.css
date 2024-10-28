@@ -71,15 +71,22 @@ nav a:hover {
 
 .hero {
     position: relative;
-    align-items: center;
-    background-position: center;
+    width: 100%; /* Full-width */
+    height: 500px; /* Adjust height as needed */
+    background-image: url('images/rafting65_600.jpg'); 
     background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
+
 
 .hero img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 500px;
     background-color: #add8e6;
     border-radius: 10px;
 }
@@ -99,13 +106,14 @@ nav a:hover {
 
 .hero article {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(222, 255, 255, 0.425);
     padding: 20px;
     max-width: 60%;
     border-radius: 10px;
+    z-index: 3;
 }
 
 .hero article img {
@@ -114,6 +122,25 @@ nav a:hover {
     height: auto;
     margin-left: 20px;
 }
+.container {
+    position: relative;
+}
+
+.floating-image {
+    position: absolute;
+    top: 20px;  /* Adjust the vertical position */
+    left: 20px; /* Adjust the horizontal position */
+    width: 150px; /* Set an appropriate width for the image */
+    z-index: 10; /* Make sure the image is on top of the text */
+    opacity: 0.8; /* Optional: adds a slight transparency effect */
+}
+
+.text-content {
+    padding: 30px; /* Create some padding so text isn't directly under the image */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 
 main {
     padding: 20px;
@@ -443,4 +470,127 @@ footer a:hover {
     .contact-form {
         padding: 1rem;
     }
+}
+/* Testimonial Section Container */
+.testimonial-carousel {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Header */
+.testimonial-carousel h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.testimonial-carousel h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+/* Testimonial Slides */
+.testimonial-slide {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Client Image */
+.testimonial-slide img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial Text */
+.testimonial-slide p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* Client Name */
+.testimonial-slide p br + * {
+    display: block;
+    color: #3498db;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-carousel {
+        padding: 1rem;
+        margin: 2rem auto;
+    }
+
+    .testimonial-carousel h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-slide {
+        padding: 1.5rem;
+    }
+
+    .testimonial-slide img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .testimonial-slide p {
+        font-size: 1rem;
+    }
+}
+
+/* Optional: Animation for Slides */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-slide {
+    animation: slideIn 0.5s ease forwards;
 }

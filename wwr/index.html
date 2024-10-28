@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home - Rafael Rafting Site plan</title>
+        <meta name="description" content="Discover a vibrant world of adventure in nature, exploring landscapes and sharing stories under the stars.">
+        <meta name="author" content="Racheal Katono">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/rafting.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    </head>
+    <body>
+        <header>
+            <img src="images/rafael.png" alt="Rafael Rafting Site Plan Logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </header>
+        <main>
+            <!-- Full-width Hero Section -->
+                <section class="hero1">
+                            
+                    <div class="hero-content">
+                        <h1>Experience the Thrill of Rafael Rafting Site plan</h1>
+                        <h2>Embark on an Unforgettable Rafael Rafting Site plan</h2>
+                        <button onclick="location.href='trips.html'" class="button">Explore Trips</button>
+
+                        <div class="container">
+                            <img src="images/floating paddle.jpg" alt="Floating Image" class="floating-image">
+                            <div class="text-content">
+                                <p>Join us for unforgettable adventures on the rapids!</p> 
+                            </div>
+                        </div>
+                        
+                </section> 
+                <!-- CSS Grid Layout -->
+                <section class="grid-layout">
+                    <div class="grid-item">
+                        <img src="images/rafting-purpose.jpg" alt="Rafting Adventure 1">
+                        <h3>Our Purpose</h3>
+                        <p>At Rafael Rafting, we provide safe and thrilling whitewater adventures for all skill levels, creating unforgettable experiences. Join us for excitement and lasting memories!`   </p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/rafting65_600.jpg" alt="Rafting Adventure 2">
+                        <h3>Our Offerings</h3>
+                        <p>At Rafael Rafting, we offer a range of trips, from beginner-friendly excursions for newcomers to challenging routes for experienced rafters. Whether you seek a relaxing ride or thrilling adventure, we have the perfect trip for you.</p>
+                    </div>
+                </section>
+                
+                <!-- Newsletter Signup -->
+                <section class="newsletter-signup">
+                    <h2>Stay Connected</h2>
+                    <p>Sign up for the latest rafting news and promotions.</p>
+                    <form action="submit_newsletter.php" method="post">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit" class="button">Sign Up</button>
+                    </form>
+                    <div class="subscriber-count">
+                        <h3>Current Subscribers: <span id="subscriber-count">1M</span></h3>
+                    </div>
+                </section>
+                
+                <!-- Testimonial Carousel -->
+                <section class="testimonial-carousel">
+                    <h2>What Our Adventurers Say</h2>
+                    <div class="testimonial-slide">
+                        <img src="images/client1.jpg" alt="User Photo">
+                        <p>"Tried to channel my inner river warrior but looked more like a panicked penguin in a life vest.
+                            Still managed to make the rapids our personal water park - best family blooper reel ever! 🌊😅"<br> - Joanitah Sylivia</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <img src="images/client2.jpg" alt="User Photo">
+                        <p>"Came for a boat ride, got a full-blown aquatic rollercoaster instead!
+                            Our guide was part fish whisperer, part comedy show host, and we're totally here for it. 🎢🌟" <br>- Jalia Walden</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <img src="images/client3.jpg" alt="User Photo">
+                        <p>"Spent the day turning rapids into my personal dance floor (mostly involuntarily).
+                            My hair's a mess, my dignity's somewhere downstream, but my fun meter is off the charts! 💃💦"<br> - Ruth Joan</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <img src="images/client4.jpg" alt="User Photo">
+                        <p>"Went rafting to get out of my comfort zone - plot twist, found a new comfort zone at full speed!
+                            Now I'm just a regular person with an irregular obsession with paddling through chaos. 🚣‍♂️✨"<br> - Resty Biniam</p>
+                    </div>
+                </section>
+                
+            </main>
+            
+            <footer>
+                <div class="copyright">
+                    <p>&copy; 2024 Rafael Rafting Site Plan. All rights reserved.</p>
+                </div>
+                <div class="sociallinks">
+                    <a href="#"><img src="images/facebook.webp" alt="Facebook"></a>
+                    <a href="#"><img src="images/twitter.webp" alt="Twitter"></a>
+                    <a href="#"><img src="images/instagram.webp" alt="Instagram"></a>
+                </div>
+                <div class="wireframe-link">
+                    <a href="images/wireframe.jpg" target="_blank">R-Wireframe</a>
+                </div>
+                    <!-- JavaScript for Sticky Navigation Bar -->
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('header');
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Downscroll
+                navbar.classList.add('scrolled');
+                navbar.classList.remove('visible');
+            } else {
+                // Upscroll
+                navbar.classList.remove('scrolled');
+                navbar.classList.add('visible');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+    </script>
+    
+    <!-- JavaScript for Testimonial Carousel -->
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const totalSlides = slides.length;
+    
+        function showSlide() {
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translate(-50%, -25%) translateX(${(i - index) * 100}%)`;
+            });
+        }
+    
+        function nextSlide() {
+            index = (index + 1) % totalSlides;
+            showSlide();
+        }
+    
+        showSlide();
+        setInterval(nextSlide, 4000); // Change slide every 4 seconds
+    </script>
+    
+    <!-- JavaScript for Real-Time Updates for Subscribers -->
+    <script>
+        let subscriberCount = 35; // Start with a default value
+        const subscriberElement = document.getElementById('subscriber-count');
+
+        function updateSubscriberCount(newCount) {
+            subscriberCount = newCount;
+            subscriberElement.textContent = subscriberCount;
+        }
+
+        // Simulate real-time updates
+        setInterval(() => {
+            subscriberCount += Math.floor(Math.random() * 5); // Increment by a random number
+            updateSubscriberCount(subscriberCount);
+        }, 900); // Update every 5 seconds
+    </script>
+        
+            </footer>
+        </body>
+        </html>
