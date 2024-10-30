@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="80" fill="#f0f0f0" stroke="#333"/>
+  <rect x="20" y="10" width="100" height="60" fill="#ddd" stroke="#333"/>
+  <text x="70" y="45" text-anchor="middle" fill="#666">Logo</text>
+  <!-- Navigation -->
+  <rect x="400" y="20" width="360" height="40" fill="#fff" stroke="#333"/>
+  <text x="580" y="45" text-anchor="middle">Navigation Menu</text>
+
+  <!-- Hero Image -->
+  <rect x="0" y="80" width="800" height="300" fill="#ddd" stroke="#333"/>
+  <text x="400" y="200" text-anchor="middle">Contact Us Hero Image</text>
+
+  <!-- Get In Touch Section -->
+  <rect x="20" y="400" width="370" height="200" fill="#fff" stroke="#333"/>
+  <text x="205" y="430" text-anchor="middle" font-weight="bold">Get In Touch</text>
+  <line x1="40" y1="450" x2="370" y2="450" stroke="#333"/>
+  <text x="40" y="480">Address</text>
+  <text x="40" y="510">Phone</text>
+  <text x="40" y="540">Email</text>
+
+  <!-- Map -->
+  <rect x="410" y="400" width="370" height="200" fill="#fff" stroke="#333"/>
+  <text x="595" y="500" text-anchor="middle">Map Embed</text>
+
+  <!-- Contact Form -->
+  <rect x="20" y="620" width="760" height="350" fill="#fff" stroke="#333"/>
+  <text x="400" y="650" text-anchor="middle" font-weight="bold">Send Us a Message</text>
+  <rect x="40" y="670" width="720" height="40" fill="#f5f5f5" stroke="#ccc"/>
+  <rect x="40" y="720" width="720" height="40" fill="#f5f5f5" stroke="#ccc"/>
+  <rect x="40" y="770" width="720" height="100" fill="#f5f5f5" stroke="#ccc"/>
+  <rect x="40" y="890" width="100" height="40" fill="#333" stroke="none"/>
+  <text x="90" y="915" text-anchor="middle" fill="white">Submit</text>
+</svg>

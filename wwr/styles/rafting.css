@@ -36,7 +36,7 @@ header {
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: 20px;
-    background-color: var(--accent1-color);
+    background-color: #1A472A;
 }
 
 header img {
@@ -500,17 +500,17 @@ footer a:hover {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(to right, #3498db, #2ecc71);
+    background: linear-gradient(to right, #0056b3, #28a745);
     border-radius: 2px;
 }
 
 /* Testimonial Slides */
 .testimonial-slide {
-    background: white;
+    background: rgb(30, 15, 15);
     padding: 2rem;
     border-radius: 12px;
     margin: 1rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(202, 186, 186, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -536,7 +536,7 @@ footer a:hover {
 
 /* Testimonial Text */
 .testimonial-slide p {
-    color: #555;
+    color: #f9f0f0;
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -593,4 +593,713 @@ footer a:hover {
 
 .testimonial-slide {
     animation: slideIn 0.5s ease forwards;
+}
+/* Newsletter Section Styling */
+.newsletter-signup {
+    background: linear-gradient(135deg, #240358, #3d0766);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    margin: 4rem auto;
+    max-width: 1200px;
+}
+
+/* Animated Background Wave Effect */
+.newsletter-signup::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='rgba(255,255,255,0.1)' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    animation: wave 15s linear infinite;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@keyframes wave {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1440px; }
+}
+
+/* Headings */
+.newsletter-signup h2 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.newsletter-signup p {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Form Styling */
+.newsletter-signup form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter-signup input {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background: rgba(25, 23, 23, 0.9);
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-signup input:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(160, 141, 141, 0.2);
+    background: rgb(13, 12, 12);
+}
+
+.newsletter-signup button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background: #efe3a4;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-signup button:hover {
+    background: #dcd7ac;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button click effect */
+.newsletter-signup button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Subscriber Count Section */
+.subscriber-count {
+    margin-top: 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.subscriber-count h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#subscriber-count {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #e0d08e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Success Message Animation */
+@keyframes success-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .newsletter-signup form {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .newsletter-signup input {
+        flex: 1;
+    }
+
+    .newsletter-signup button {
+        min-width: 150px;
+    }
+}
+
+/* Loading State */
+.newsletter-signup button.loading {
+    background: #666666;
+    pointer-events: none;
+    color: #000203;
+}
+
+.newsletter-signup button.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    to { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Floating Animation for Interactive Elements */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.newsletter-signup input:focus,
+.newsletter-signup button:hover {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Optional: Add a subtle shine effect on hover */
+.newsletter-signup button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.newsletter-signup button:hover::before {
+    animation: shine 1.5s;
+}
+
+@keyframes shine {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.grid-item h3 {
+    color: #1a4a6e;
+    padding: 1.5rem 1.5rem 0.5rem;
+    margin: 0;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.grid-item h3::after {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: #0097a7;
+    transition: width 0.3s ease;
+}
+
+.grid-item:hover h3::after {
+    width: 100px;
+}
+
+.grid-item p {
+    padding: 1rem 1.5rem 1.5rem;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-layout {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+    
+    .grid-item h3 {
+        font-size: 1.25rem;
+        padding: 1rem 1rem 0.5rem;
+    }
+    
+    .grid-item p {
+        padding: 0.8rem 1rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+.hero1 {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d1dde4, #1a2639);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* Add a subtle water-like animation to the background */
+.hero1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 50 Q 25 60, 50 50 T 100 50 T 150 50" stroke="rgba(255,255,255,0.1)" fill="none" stroke-width="2"/></svg>');
+    background-size: 100px 100px;
+    animation: moveWaves 10s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes moveWaves {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 0; }
+}
+
+.hero-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+    color: var(--text-light);
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+    color: var(--text-light);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+    color: var(--text-light);
+}
+
+.button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: #ebc1bd;
+    color: var(--text-light);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out 0.6s backwards;
+}
+
+.button:hover {
+    background: #f0978e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    animation: fadeIn 1s ease-out 0.9s backwards;
+}
+
+.floating-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    animation: float 6s ease-in-out infinite;
+}
+
+.text-content {
+    max-width: 400px;
+}
+
+.text-content p {
+    color: #040303;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero1 {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .floating-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Add a subtle hover effect to the whole hero section */
+.hero1:hover::before {
+    animation-play-state: paused;
+}
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/trips-hero.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #480606;
+    margin-bottom: 10px;
+}
+
+.hero-xy h1 {
+    font-size: 3em;
+    color: #090000;
+    margin-bottom: 10px;
+}
+
+.hero-xy p{
+    font-size: 1.5em;
+    color: #160707;
+    margin-bottom: 30px;
+}
+.hero-content p {
+    font-size: 1.5em;
+    color: #700808;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.button {
+    background-color: #070c12;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #144164;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured Trips Section */
+.featured-trips {
+    padding: 60px 20px;
+    background-color: #f0f4f8;
+    text-align: center;
+}
+
+.featured-trips h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.trip-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trip-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.trip-card img {
+    width: 100%;
+    height: auto;
+}
+
+.trip-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.trip-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.difficulty {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.trip-content p {
+    margin-bottom: 15px;
+    color: #281717;
+}
+
+.trip-details {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.trip-detailsxx {
+    color: #3b0202;
+    margin-bottom: 5px;
+}
+
+/* Trip Schedule Section */
+.trip-schedule {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.trip-schedule h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.table-containerxyz {
+    background-color: #acc8e5;
+    color: #010408  
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #acc8e5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    color: #112a46
+}
+
+thead {
+    background-color: #acc8e5;
+    color: #112a46;
+}
+
+thead th {
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody td {
+    padding: 15px;
+    text-align: center;
+    color: #0e0b0b;
+}
+
+.available {
+    color: #333333;
+    font-weight: bold;
+}
+
+.limited {
+    color: #3e2f01;
+    font-weight: bold;
+}
+
+.booking-fast {
+    color: #333333;
+    font-weight: bold;
+}
+
+tbody td:first-child {
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid #ddd;
+}
+
+/* Call to Action Section */
+.trip-cta {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/cta-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cta-content {
+    background-color: #acc8e5;
+    padding: 40px 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-content h2 {
+    font-size: 2.5em;
+    color: #112a46;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.2em;
+    color: #112a46;
+    margin-bottom: 30px;
 }

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200">
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="80" fill="#f0f0f0" stroke="#333"/>
+  <rect x="20" y="10" width="100" height="60" fill="#ddd" stroke="#333"/>
+  <text x="70" y="45" text-anchor="middle" fill="#666">Logo</text>
+
+  <!-- Hero Section -->
+  <rect x="0" y="80" width="800" height="300" fill="#ddd" stroke="#333"/>
+  <text x="400" y="180" text-anchor="middle" font-size="24">Experience the Thrill</text>
+  <text x="400" y="220" text-anchor="middle">Embark on an Unforgettable Rafael Rafting Site plan</text>
+  <rect x="300" y="250" width="200" height="40" fill="#333"/>
+  <text x="400" y="275" text-anchor="middle" fill="white">EXPLORE TRIPS</text>
+
+  <!-- Features -->
+  <rect x="20" y="400" width="370" height="200" fill="#fff" stroke="#333"/>
+  <text x="205" y="430" text-anchor="middle" font-weight="bold">Our Purpose</text>
+  
+  <rect x="410" y="400" width="370" height="200" fill="#fff" stroke="#333"/>
+  <text x="595" y="430" text-anchor="middle" font-weight="bold">Our Offerings</text>
+
+  <!-- Newsletter -->
+  <rect x="100" y="620" width="600" height="200" fill="#ddd" stroke="#333"/>
+  <text x="400" y="670" text-anchor="middle" font-size="20">Stay Connected</text>
+  <rect x="200" y="700" width="300" height="40" fill="#fff" stroke="#333"/>
+  <rect x="520" y="700" width="100" height="40" fill="#333"/>
+
+  <!-- Testimonials -->
+  <text x="400" y="860" text-anchor="middle" font-size="20">What Our Adventurers Say</text>
+  <rect x="100" y="890" width="600" height="280" fill="#f0f0f0" stroke="#333"/>
+  <rect x="120" y="910" width="560" height="60" fill="#fff" stroke="#333"/>
+  <rect x="120" y="980" width="560" height="60" fill="#fff" stroke="#333"/>
+  <rect x="120" y="1050" width="560" height="60" fill="#fff" stroke="#333"/>
+</svg>
